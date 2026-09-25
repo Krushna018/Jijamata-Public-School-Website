@@ -1,0 +1,436 @@
+<div class="section-header">
+    <h2><i class="fas fa-money-bill-wave"></i> My Fees</h2>
+    <p>View fee structure, payment history, and make online payments</p>
+</div>
+
+<div class="fees-container">
+    <!-- Fee Summary Overview -->
+    <div class="fee-overview">
+        <div class="overview-card total-fee">
+            <div class="card-icon">
+                <i class="fas fa-calculator"></i>
+            </div>
+            <div class="card-content">
+                <h3>$2,500</h3>
+                <p>Total Annual Fee</p>
+            </div>
+        </div>
+
+        <div class="overview-card paid-fee">
+            <div class="card-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3>$2,000</h3>
+                <p>Amount Paid</p>
+            </div>
+        </div>
+
+        <div class="overview-card pending-fee">
+            <div class="card-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3>$500</h3>
+                <p>Pending Amount</p>
+            </div>
+        </div>
+
+        <div class="overview-card due-date">
+            <div class="card-icon">
+                <i class="fas fa-calendar-times"></i>
+            </div>
+            <div class="card-content">
+                <h3>Dec 31</h3>
+                <p>Next Due Date</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Fee Status -->
+    <div class="current-fee-status">
+        <div class="status-header">
+            <h3><i class="fas fa-info-circle"></i> Current Fee Status</h3>
+            <div class="payment-alert">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Payment Due: $500 by December 31, 2024</span>
+            </div>
+        </div>
+
+        <div class="fee-breakdown">
+            <div class="breakdown-card">
+                <h4>Academic Year 2024-2025</h4>
+                <div class="fee-items">
+                    <div class="fee-item">
+                        <span class="item-name">Tuition Fee</span>
+                        <span class="item-amount">$1,800</span>
+                        <span class="item-status paid"><i class="fas fa-check"></i> Paid</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="item-name">Library Fee</span>
+                        <span class="item-amount">$100</span>
+                        <span class="item-status paid"><i class="fas fa-check"></i> Paid</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="item-name">Laboratory Fee</span>
+                        <span class="item-amount">$200</span>
+                        <span class="item-status paid"><i class="fas fa-check"></i> Paid</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="item-name">Sports Fee</span>
+                        <span class="item-amount">$100</span>
+                        <span class="item-status pending"><i class="fas fa-clock"></i> Pending</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="item-name">Development Fee</span>
+                        <span class="item-amount">$200</span>
+                        <span class="item-status pending"><i class="fas fa-clock"></i> Pending</span>
+                    </div>
+                    <div class="fee-item">
+                        <span class="item-name">Examination Fee</span>
+                        <span class="item-amount">$100</span>
+                        <span class="item-status pending"><i class="fas fa-clock"></i> Pending</span>
+                    </div>
+                </div>
+                <div class="breakdown-total">
+                    <div class="total-row">
+                        <span>Total Fee:</span>
+                        <span>$2,500</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Amount Paid:</span>
+                        <span class="paid-amount">$2,000</span>
+                    </div>
+                    <div class="total-row pending-row">
+                        <span>Pending Amount:</span>
+                        <span class="pending-amount">$500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Options -->
+    <div class="payment-section">
+        <div class="section-title">
+            <h3><i class="fas fa-credit-card"></i> Make Payment</h3>
+        </div>
+
+        <div class="payment-form">
+            <div class="payment-amount">
+                <label for="paymentAmount">Select Amount to Pay</label>
+                <div class="amount-options">
+                    <button class="amount-btn" onclick="selectAmount(500)">$500 (Full Pending)</button>
+                    <button class="amount-btn" onclick="selectAmount(250)">$250 (Partial)</button>
+                    <button class="amount-btn" onclick="selectAmount(100)">$100 (Minimum)</button>
+                    <div class="custom-amount">
+                        <input type="number" id="customAmount" placeholder="Custom Amount" min="50" max="500">
+                        <button onclick="selectCustomAmount()">Select</button>
+                    </div>
+                </div>
+                <div class="selected-amount">
+                    <span>Selected Amount: $<span id="selectedAmount">0</span></span>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h4>Choose Payment Method</h4>
+                <div class="method-options">
+                    <div class="method-option">
+                        <input type="radio" id="creditCard" name="paymentMethod" value="credit">
+                        <label for="creditCard">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Credit/Debit Card</span>
+                        </label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bank">
+                        <label for="bankTransfer">
+                            <i class="fas fa-university"></i>
+                            <span>Bank Transfer</span>
+                        </label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="onlineWallet" name="paymentMethod" value="wallet">
+                        <label for="onlineWallet">
+                            <i class="fas fa-wallet"></i>
+                            <span>Online Wallet</span>
+                        </label>
+                    </div>
+                    <div class="method-option">
+                        <input type="radio" id="upi" name="paymentMethod" value="upi">
+                        <label for="upi">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>UPI Payment</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-actions">
+                <button class="pay-now-btn" onclick="processPayment()" disabled>
+                    <i class="fas fa-lock"></i> Pay Securely
+                </button>
+                <p class="payment-note">
+                    <i class="fas fa-shield-alt"></i>
+                    Your payment is secured with 256-bit SSL encryption
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment History -->
+    <div class="payment-history">
+        <div class="section-title">
+            <h3><i class="fas fa-history"></i> Payment History</h3>
+            <div class="history-filters">
+                <select class="filter-select">
+                    <option value="all">All Payments</option>
+                    <option value="2024">Academic Year 2024-25</option>
+                    <option value="2023">Academic Year 2023-24</option>
+                </select>
+                <button class="download-history-btn" onclick="downloadHistory()">
+                    <i class="fas fa-download"></i> Download History
+                </button>
+            </div>
+        </div>
+
+        <div class="history-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Payment Method</th>
+                        <th>Transaction ID</th>
+                        <th>Status</th>
+                        <th>Receipt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nov 15, 2024</td>
+                        <td>Tuition Fee - Second Installment</td>
+                        <td>$900</td>
+                        <td>Credit Card</td>
+                        <td>TXN789012345</td>
+                        <td><span class="status-badge success">Success</span></td>
+                        <td>
+                            <button class="receipt-btn" onclick="downloadReceipt('TXN789012345')">
+                                <i class="fas fa-receipt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sep 10, 2024</td>
+                        <td>Library & Lab Fee</td>
+                        <td>$300</td>
+                        <td>Bank Transfer</td>
+                        <td>TXN456789012</td>
+                        <td><span class="status-badge success">Success</span></td>
+                        <td>
+                            <button class="receipt-btn" onclick="downloadReceipt('TXN456789012')">
+                                <i class="fas fa-receipt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jul 20, 2024</td>
+                        <td>Admission Fee & First Installment</td>
+                        <td>$800</td>
+                        <td>Online Wallet</td>
+                        <td>TXN123456789</td>
+                        <td><span class="status-badge success">Success</span></td>
+                        <td>
+                            <button class="receipt-btn" onclick="downloadReceipt('TXN123456789')">
+                                <i class="fas fa-receipt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dec 05, 2024</td>
+                        <td>Late Fee Payment</td>
+                        <td>$25</td>
+                        <td>UPI</td>
+                        <td>TXN987654321</td>
+                        <td><span class="status-badge failed">Failed</span></td>
+                        <td>
+                            <button class="retry-btn" onclick="retryPayment('TXN987654321')">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Fee Schedule -->
+    <div class="fee-schedule">
+        <div class="section-title">
+            <h3><i class="fas fa-calendar-alt"></i> Fee Payment Schedule</h3>
+        </div>
+
+        <div class="schedule-timeline">
+            <div class="timeline-item completed">
+                <div class="timeline-date">Jul 2024</div>
+                <div class="timeline-content">
+                    <h4>Admission Fee</h4>
+                    <p>$800 - Paid</p>
+                    <span class="status completed"><i class="fas fa-check"></i></span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-date">Sep 2024</div>
+                <div class="timeline-content">
+                    <h4>First Quarter</h4>
+                    <p>$600 - Paid</p>
+                    <span class="status completed"><i class="fas fa-check"></i></span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-date">Nov 2024</div>
+                <div class="timeline-content">
+                    <h4>Second Quarter</h4>
+                    <p>$600 - Paid</p>
+                    <span class="status completed"><i class="fas fa-check"></i></span>
+                </div>
+            </div>
+
+            <div class="timeline-item pending">
+                <div class="timeline-date">Dec 2024</div>
+                <div class="timeline-content">
+                    <h4>Final Payment</h4>
+                    <p>$500 - Due</p>
+                    <span class="status pending"><i class="fas fa-clock"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Important Information -->
+    <div class="fee-information">
+        <div class="section-title">
+            <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h4><i class="fas fa-exclamation-triangle"></i> Late Payment Policy</h4>
+                <ul>
+                    <li>Late payment fee of $25 will be charged after due date</li>
+                    <li>Student may be barred from examinations if fees are not paid</li>
+                    <li>No refund policy for paid fees</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-credit-card"></i> Payment Methods</h4>
+                <ul>
+                    <li>Online payment processing fee: 2.5% of transaction amount</li>
+                    <li>Bank transfer: No additional charges</li>
+                    <li>Cash payments accepted at school office</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h4><i class="fas fa-phone"></i> Contact Information</h4>
+                <ul>
+                    <li>Fee Office: +1 (555) 123-4567 Ext. 102</li>
+                    <li>Email: fees@school.edu</li>
+                    <li>Office Hours: Mon-Fri 9:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let selectedPaymentAmount = 0;
+
+function selectAmount(amount) {
+    selectedPaymentAmount = amount;
+    document.getElementById('selectedAmount').textContent = amount;
+    
+    // Remove active class from all amount buttons
+    const buttons = document.querySelectorAll('.amount-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
+    // Clear custom amount input
+    document.getElementById('customAmount').value = '';
+    
+    checkPaymentReadiness();
+}
+
+function selectCustomAmount() {
+    const customAmount = parseInt(document.getElementById('customAmount').value);
+    if (customAmount >= 50 && customAmount <= 500) {
+        selectedPaymentAmount = customAmount;
+        document.getElementById('selectedAmount').textContent = customAmount;
+        
+        // Remove active class from amount buttons
+        const buttons = document.querySelectorAll('.amount-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        checkPaymentReadiness();
+    } else {
+        alert('Please enter amount between $50 and $500');
+    }
+}
+
+function checkPaymentReadiness() {
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+    const payBtn = document.querySelector('.pay-now-btn');
+    
+    if (selectedPaymentAmount > 0 && paymentMethod) {
+        payBtn.disabled = false;
+        payBtn.innerHTML = `<i class="fas fa-lock"></i> Pay $${selectedPaymentAmount} Securely`;
+    } else {
+        payBtn.disabled = true;
+        payBtn.innerHTML = '<i class="fas fa-lock"></i> Pay Securely';
+    }
+}
+
+function processPayment() {
+    if (selectedPaymentAmount > 0) {
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+        if (paymentMethod) {
+            alert(`Processing payment of $${selectedPaymentAmount} via ${paymentMethod.nextElementSibling.textContent.trim()}`);
+            // Add actual payment processing logic here
+        } else {
+            alert('Please select a payment method');
+        }
+    } else {
+        alert('Please select an amount to pay');
+    }
+}
+
+function downloadReceipt(transactionId) {
+    alert(`Downloading receipt for transaction: ${transactionId}`);
+    // Add receipt download logic here
+}
+
+function retryPayment(transactionId) {
+    alert(`Retrying failed payment: ${transactionId}`);
+    // Add retry payment logic here
+}
+
+function downloadHistory() {
+    alert('Downloading payment history...');
+    // Add history download logic here
+}
+
+// Add event listeners for payment method selection
+document.addEventListener('DOMContentLoaded', function() {
+    const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
+    paymentMethods.forEach(method => {
+        method.addEventListener('change', checkPaymentReadiness);
+    });
+});
+</script>

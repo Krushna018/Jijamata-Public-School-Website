@@ -1,0 +1,399 @@
+<div class="section-header">
+    <h2><i class="fas fa-chart-line"></i> Marksheet & Results</h2>
+    <p>View your academic performance, grades, and detailed scorecards</p>
+</div>
+
+<div class="marksheet-container">
+    <!-- Performance Overview -->
+    <div class="performance-overview">
+        <div class="overview-card cgpa">
+            <div class="card-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="card-content">
+                <h3>8.5</h3>
+                <p>Current CGPA</p>
+            </div>
+        </div>
+
+        <div class="overview-card percentage">
+            <div class="card-icon">
+                <i class="fas fa-percentage"></i>
+            </div>
+            <div class="card-content">
+                <h3>85%</h3>
+                <p>Overall Percentage</p>
+            </div>
+        </div>
+
+        <div class="overview-card rank">
+            <div class="card-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card-content">
+                <h3>5th</h3>
+                <p>Class Rank</p>
+            </div>
+        </div>
+
+        <div class="overview-card grade">
+            <div class="card-icon">
+                <i class="fas fa-medal"></i>
+            </div>
+            <div class="card-content">
+                <h3>A</h3>
+                <p>Overall Grade</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Term Selection -->
+    <div class="term-selection">
+        <div class="section-title">
+            <h3><i class="fas fa-calendar-alt"></i> Select Academic Term</h3>
+        </div>
+        <div class="term-buttons">
+            <button class="term-btn active" onclick="showTerm('term1')">First Term</button>
+            <button class="term-btn" onclick="showTerm('term2')">Second Term</button>
+            <button class="term-btn" onclick="showTerm('final')">Final Results</button>
+        </div>
+    </div>
+
+    <!-- First Term Marksheet -->
+    <div id="term1" class="marksheet-term active">
+        <div class="marksheet-header">
+            <h3><i class="fas fa-file-alt"></i> First Term Results - Academic Year 2024-25</h3>
+            <div class="download-options">
+                <button class="download-btn" onclick="downloadMarksheet('term1')">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button class="print-btn" onclick="printMarksheet('term1')">
+                    <i class="fas fa-print"></i> Print
+                </button>
+            </div>
+        </div>
+
+        <div class="marksheet-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Max Marks</th>
+                        <th>Obtained Marks</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mathematics</strong></td>
+                        <td>100</td>
+                        <td>92</td>
+                        <td>92%</td>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physics</strong></td>
+                        <td>100</td>
+                        <td>88</td>
+                        <td>88%</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>Very Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chemistry</strong></td>
+                        <td>100</td>
+                        <td>85</td>
+                        <td>85%</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biology</strong></td>
+                        <td>100</td>
+                        <td>90</td>
+                        <td>90%</td>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>English</strong></td>
+                        <td>100</td>
+                        <td>82</td>
+                        <td>82%</td>
+                        <td><span class="grade-badge b">B+</span></td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>History</strong></td>
+                        <td>100</td>
+                        <td>78</td>
+                        <td>78%</td>
+                        <td><span class="grade-badge b">B</span></td>
+                        <td>Satisfactory</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>600</strong></td>
+                        <td><strong>515</strong></td>
+                        <td><strong>85.83%</strong></td>
+                        <td><strong><span class="grade-badge a">A</span></strong></td>
+                        <td><strong>Very Good</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="marksheet-summary">
+            <div class="summary-item">
+                <span class="label">Total Marks:</span>
+                <span class="value">515/600</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Percentage:</span>
+                <span class="value">85.83%</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Grade:</span>
+                <span class="value">A</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Class Rank:</span>
+                <span class="value">5th out of 45</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Term Marksheet -->
+    <div id="term2" class="marksheet-term">
+        <div class="marksheet-header">
+            <h3><i class="fas fa-file-alt"></i> Second Term Results - Academic Year 2024-25</h3>
+            <div class="download-options">
+                <button class="download-btn" onclick="downloadMarksheet('term2')">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button class="print-btn" onclick="printMarksheet('term2')">
+                    <i class="fas fa-print"></i> Print
+                </button>
+            </div>
+        </div>
+
+        <div class="marksheet-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Max Marks</th>
+                        <th>Obtained Marks</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Mathematics</strong></td>
+                        <td>100</td>
+                        <td>95</td>
+                        <td>95%</td>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>Outstanding</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physics</strong></td>
+                        <td>100</td>
+                        <td>91</td>
+                        <td>91%</td>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chemistry</strong></td>
+                        <td>100</td>
+                        <td>87</td>
+                        <td>87%</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>Very Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biology</strong></td>
+                        <td>100</td>
+                        <td>93</td>
+                        <td>93%</td>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>Outstanding</td>
+                    </tr>
+                    <tr>
+                        <td><strong>English</strong></td>
+                        <td>100</td>
+                        <td>84</td>
+                        <td>84%</td>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td><strong>History</strong></td>
+                        <td>100</td>
+                        <td>80</td>
+                        <td>80%</td>
+                        <td><span class="grade-badge b">B+</span></td>
+                        <td>Good</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>600</strong></td>
+                        <td><strong>530</strong></td>
+                        <td><strong>88.33%</strong></td>
+                        <td><strong><span class="grade-badge a">A</span></strong></td>
+                        <td><strong>Very Good</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Final Results -->
+    <div id="final" class="marksheet-term">
+        <div class="marksheet-header">
+            <h3><i class="fas fa-file-alt"></i> Final Results - Academic Year 2024-25</h3>
+            <div class="download-options">
+                <button class="download-btn" onclick="downloadMarksheet('final')">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button class="print-btn" onclick="printMarksheet('final')">
+                    <i class="fas fa-print"></i> Print
+                </button>
+            </div>
+        </div>
+
+        <div class="final-results">
+            <div class="annual-summary">
+                <h4>Annual Performance Summary</h4>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h5>First Term</h5>
+                        <p>515/600 (85.83%)</p>
+                        <span class="grade-badge a">A</span>
+                    </div>
+                    <div class="summary-card">
+                        <h5>Second Term</h5>
+                        <p>530/600 (88.33%)</p>
+                        <span class="grade-badge a">A</span>
+                    </div>
+                    <div class="summary-card final-card">
+                        <h5>Annual Average</h5>
+                        <p>1045/1200 (87.08%)</p>
+                        <span class="grade-badge a">A</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subject-wise Performance Chart -->
+    <div class="performance-chart">
+        <div class="section-title">
+            <h3><i class="fas fa-chart-bar"></i> Subject-wise Performance Trend</h3>
+        </div>
+        <div class="chart-placeholder">
+            <div class="chart-info">
+                <p><i class="fas fa-info-circle"></i> Performance chart showing improvement across terms</p>
+                <div class="legend">
+                    <div class="legend-item"><span class="color-box term1"></span> First Term</div>
+                    <div class="legend-item"><span class="color-box term2"></span> Second Term</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grade Scale -->
+    <div class="grade-scale">
+        <div class="section-title">
+            <h3><i class="fas fa-info-circle"></i> Grading Scale</h3>
+        </div>
+        <div class="scale-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Percentage Range</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="grade-badge a">A+</span></td>
+                        <td>90% - 100%</td>
+                        <td>Outstanding</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge a">A</span></td>
+                        <td>80% - 89%</td>
+                        <td>Excellent</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge b">B+</span></td>
+                        <td>70% - 79%</td>
+                        <td>Very Good</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge b">B</span></td>
+                        <td>60% - 69%</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge c">C</span></td>
+                        <td>50% - 59%</td>
+                        <td>Satisfactory</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge d">D</span></td>
+                        <td>40% - 49%</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td><span class="grade-badge f">F</span></td>
+                        <td>Below 40%</td>
+                        <td>Fail</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+function showTerm(termId) {
+    // Hide all term sections
+    const terms = document.querySelectorAll('.marksheet-term');
+    terms.forEach(term => {
+        term.classList.remove('active');
+    });
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.term-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // Show selected term
+    const selectedTerm = document.getElementById(termId);
+    if (selectedTerm) {
+        selectedTerm.classList.add('active');
+    }
+
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+
+function downloadMarksheet(term) {
+    alert(`Downloading ${term} marksheet as PDF...`);
+    // Add actual download logic here
+}
+
+function printMarksheet(term) {
+    window.print();
+}
+</script>

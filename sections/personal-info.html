@@ -1,0 +1,426 @@
+<div class="section-header">
+    <h2><i class="fas fa-user-cog"></i> Personal Information</h2>
+    <p>View and update your personal details and contact information</p>
+</div>
+
+<div class="personal-info-container">
+    <!-- Profile Picture Section -->
+    <div class="profile-section">
+        <div class="profile-picture">
+            <div class="avatar-container">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="avatar-overlay">
+                    <button class="change-photo-btn" onclick="changeProfilePicture()">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h3 id="profileName">Demo Student</h3>
+                <p id="profileId">Student ID: STU001</p>
+                <p id="profileClass">Class: 10th Grade - Section A</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Personal Information Form -->
+    <div class="info-sections">
+        <!-- Basic Information -->
+        <div class="info-card">
+            <div class="card-header">
+                <h3><i class="fas fa-user"></i> Basic Information</h3>
+                <button class="edit-btn" onclick="toggleEdit('basic')">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+            <div class="card-content" id="basicInfo">
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" value="Demo" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" value="Student" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Date of Birth</label>
+                        <input type="date" id="dateOfBirth" value="2008-01-15" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Gender</label>
+                        <select id="gender" disabled>
+                            <option value="male" selected>Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="info-group">
+                        <label>Blood Group</label>
+                        <select id="bloodGroup" disabled>
+                            <option value="O+" selected>O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    <div class="info-group">
+                        <label>Nationality</label>
+                        <input type="text" id="nationality" value="American" readonly>
+                    </div>
+                </div>
+                <div class="edit-actions" id="basicActions" style="display: none;">
+                    <button class="save-btn" onclick="saveInfo('basic')">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <button class="cancel-btn" onclick="cancelEdit('basic')">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="info-card">
+            <div class="card-header">
+                <h3><i class="fas fa-phone"></i> Contact Information</h3>
+                <button class="edit-btn" onclick="toggleEdit('contact')">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+            <div class="card-content" id="contactInfo">
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" value="demo.student@email.com" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" value="+1 (555) 123-4567" readonly>
+                    </div>
+                    <div class="info-group full-width">
+                        <label>Current Address</label>
+                        <textarea id="currentAddress" readonly>123 Main Street, City, State 12345</textarea>
+                    </div>
+                    <div class="info-group full-width">
+                        <label>Permanent Address</label>
+                        <textarea id="permanentAddress" readonly>123 Main Street, City, State 12345</textarea>
+                    </div>
+                    <div class="info-group">
+                        <label>Emergency Contact Name</label>
+                        <input type="text" id="emergencyName" value="John Demo" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Emergency Contact Phone</label>
+                        <input type="tel" id="emergencyPhone" value="+1 (555) 987-6543" readonly>
+                    </div>
+                </div>
+                <div class="edit-actions" id="contactActions" style="display: none;">
+                    <button class="save-btn" onclick="saveInfo('contact')">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <button class="cancel-btn" onclick="cancelEdit('contact')">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Academic Information -->
+        <div class="info-card">
+            <div class="card-header">
+                <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                <span class="readonly-badge"><i class="fas fa-lock"></i> Read Only</span>
+            </div>
+            <div class="card-content">
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Student ID</label>
+                        <input type="text" value="STU001" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Current Class</label>
+                        <input type="text" value="10th Grade" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Section</label>
+                        <input type="text" value="A" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Roll Number</label>
+                        <input type="text" value="15" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Admission Date</label>
+                        <input type="date" value="2024-07-15" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Academic Year</label>
+                        <input type="text" value="2024-2025" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parent/Guardian Information -->
+        <div class="info-card">
+            <div class="card-header">
+                <h3><i class="fas fa-users"></i> Parent/Guardian Information</h3>
+                <button class="edit-btn" onclick="toggleEdit('parent')">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+            <div class="card-content" id="parentInfo">
+                <div class="parent-tabs">
+                    <button class="tab-btn active" onclick="showParentTab('father')">Father</button>
+                    <button class="tab-btn" onclick="showParentTab('mother')">Mother</button>
+                    <button class="tab-btn" onclick="showParentTab('guardian')">Guardian</button>
+                </div>
+
+                <div class="tab-content active" id="father">
+                    <div class="info-grid">
+                        <div class="info-group">
+                            <label>Father's Name</label>
+                            <input type="text" id="fatherName" value="John Demo" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Occupation</label>
+                            <input type="text" id="fatherOccupation" value="Business Professional" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="fatherPhone" value="+1 (555) 987-6543" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Email</label>
+                            <input type="email" id="fatherEmail" value="john.demo@email.com" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Annual Income</label>
+                            <input type="text" id="fatherIncome" value="$75,000" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Education</label>
+                            <input type="text" id="fatherEducation" value="Bachelor's Degree" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="mother">
+                    <div class="info-grid">
+                        <div class="info-group">
+                            <label>Mother's Name</label>
+                            <input type="text" id="motherName" value="Jane Demo" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Occupation</label>
+                            <input type="text" id="motherOccupation" value="Teacher" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="motherPhone" value="+1 (555) 987-6544" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Email</label>
+                            <input type="email" id="motherEmail" value="jane.demo@email.com" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Annual Income</label>
+                            <input type="text" id="motherIncome" value="$45,000" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Education</label>
+                            <input type="text" id="motherEducation" value="Master's in Education" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="guardian">
+                    <div class="info-grid">
+                        <div class="info-group">
+                            <label>Guardian Name</label>
+                            <input type="text" id="guardianName" value="John Demo" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Relationship</label>
+                            <select id="guardianRelation" disabled>
+                                <option value="father" selected>Father</option>
+                                <option value="mother">Mother</option>
+                                <option value="uncle">Uncle</option>
+                                <option value="aunt">Aunt</option>
+                                <option value="grandfather">Grandfather</option>
+                                <option value="grandmother">Grandmother</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="info-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="guardianPhone" value="+1 (555) 987-6543" readonly>
+                        </div>
+                        <div class="info-group">
+                            <label>Email</label>
+                            <input type="email" id="guardianEmail" value="john.demo@email.com" readonly>
+                        </div>
+                        <div class="info-group full-width">
+                            <label>Address</label>
+                            <textarea id="guardianAddress" readonly>123 Main Street, City, State 12345</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edit-actions" id="parentActions" style="display: none;">
+                    <button class="save-btn" onclick="saveInfo('parent')">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <button class="cancel-btn" onclick="cancelEdit('parent')">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical Information -->
+        <div class="info-card">
+            <div class="card-header">
+                <h3><i class="fas fa-heartbeat"></i> Medical Information</h3>
+                <button class="edit-btn" onclick="toggleEdit('medical')">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+            </div>
+            <div class="card-content" id="medicalInfo">
+                <div class="info-grid">
+                    <div class="info-group">
+                        <label>Height (cm)</label>
+                        <input type="number" id="height" value="165" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Weight (kg)</label>
+                        <input type="number" id="weight" value="55" readonly>
+                    </div>
+                    <div class="info-group full-width">
+                        <label>Known Allergies</label>
+                        <textarea id="allergies" readonly>No known allergies</textarea>
+                    </div>
+                    <div class="info-group full-width">
+                        <label>Medical Conditions</label>
+                        <textarea id="medicalConditions" readonly>None</textarea>
+                    </div>
+                    <div class="info-group">
+                        <label>Family Doctor</label>
+                        <input type="text" id="familyDoctor" value="Dr. Smith" readonly>
+                    </div>
+                    <div class="info-group">
+                        <label>Doctor's Phone</label>
+                        <input type="tel" id="doctorPhone" value="+1 (555) 111-2222" readonly>
+                    </div>
+                </div>
+                <div class="edit-actions" id="medicalActions" style="display: none;">
+                    <button class="save-btn" onclick="saveInfo('medical')">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <button class="cancel-btn" onclick="cancelEdit('medical')">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let originalValues = {};
+
+function toggleEdit(section) {
+    const inputs = document.querySelectorAll(`#${section}Info input, #${section}Info select, #${section}Info textarea`);
+    const actions = document.getElementById(`${section}Actions`);
+    const editBtn = event.target.closest('.edit-btn');
+    
+    // Store original values
+    originalValues[section] = {};
+    inputs.forEach(input => {
+        originalValues[section][input.id] = input.value;
+        input.removeAttribute('readonly');
+        input.removeAttribute('disabled');
+    });
+    
+    // Show action buttons
+    actions.style.display = 'flex';
+    editBtn.style.display = 'none';
+}
+
+function saveInfo(section) {
+    const inputs = document.querySelectorAll(`#${section}Info input, #${section}Info select, #${section}Info textarea`);
+    const actions = document.getElementById(`${section}Actions`);
+    const editBtn = document.querySelector(`#${section}Info`).closest('.info-card').querySelector('.edit-btn');
+    
+    // Here you would typically send data to server
+    alert(`${section.charAt(0).toUpperCase() + section.slice(1)} information updated successfully!`);
+    
+    // Make inputs readonly again
+    inputs.forEach(input => {
+        input.setAttribute('readonly', true);
+        if (input.tagName === 'SELECT') {
+            input.setAttribute('disabled', true);
+        }
+    });
+    
+    // Hide action buttons
+    actions.style.display = 'none';
+    editBtn.style.display = 'inline-flex';
+}
+
+function cancelEdit(section) {
+    const inputs = document.querySelectorAll(`#${section}Info input, #${section}Info select, #${section}Info textarea`);
+    const actions = document.getElementById(`${section}Actions`);
+    const editBtn = document.querySelector(`#${section}Info`).closest('.info-card').querySelector('.edit-btn');
+    
+    // Restore original values
+    inputs.forEach(input => {
+        if (originalValues[section][input.id] !== undefined) {
+            input.value = originalValues[section][input.id];
+        }
+        input.setAttribute('readonly', true);
+        if (input.tagName === 'SELECT') {
+            input.setAttribute('disabled', true);
+        }
+    });
+    
+    // Hide action buttons
+    actions.style.display = 'none';
+    editBtn.style.display = 'inline-flex';
+}
+
+function showParentTab(tabName) {
+    // Remove active class from all tabs and contents
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+    
+    tabs.forEach(tab => tab.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
+    
+    // Add active class to selected tab and content
+    event.target.classList.add('active');
+    document.getElementById(tabName).classList.add('active');
+}
+
+function changeProfilePicture() {
+    alert('Opening photo upload dialog...');
+    // Add photo upload logic here
+}
+
+// Load student data from localStorage
+window.addEventListener('DOMContentLoaded', function() {
+    const studentData = JSON.parse(localStorage.getItem('currentStudent'));
+    if (studentData) {
+        document.getElementById('profileName').textContent = studentData.name;
+        document.getElementById('profileId').textContent = `Student ID: ${studentData.id}`;
+        document.getElementById('profileClass').textContent = `Class: ${studentData.class}`;
+    }
+});
+</script>

@@ -1,0 +1,416 @@
+<div class="section-header">
+    <h2><i class="fas fa-file-alt"></i> Admission Information</h2>
+    <p>View your admission details, documents, and application status</p>
+</div>
+
+<div class="admission-container">
+    <!-- Admission Status Overview -->
+    <div class="admission-status">
+        <div class="status-card confirmed">
+            <div class="status-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="status-content">
+                <h3>Admission Confirmed</h3>
+                <p>Class 10th Grade - Section A</p>
+                <span class="admission-date">Admitted on: July 15, 2024</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Admission Details -->
+    <div class="admission-details">
+        <div class="section-title">
+            <h3><i class="fas fa-id-card"></i> Admission Details</h3>
+        </div>
+
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="card-header">
+                    <h4><i class="fas fa-user"></i> Personal Information</h4>
+                </div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <span class="label">Full Name:</span>
+                        <span class="value">Demo Student</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Student ID:</span>
+                        <span class="value">STU001</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Date of Birth:</span>
+                        <span class="value">January 15, 2008</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Gender:</span>
+                        <span class="value">Male</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Blood Group:</span>
+                        <span class="value">O+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <h4><i class="fas fa-graduation-cap"></i> Academic Information</h4>
+                </div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <span class="label">Class:</span>
+                        <span class="value">10th Grade</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Section:</span>
+                        <span class="value">A</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Roll Number:</span>
+                        <span class="value">15</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Academic Year:</span>
+                        <span class="value">2024-2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Admission Date:</span>
+                        <span class="value">July 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <h4><i class="fas fa-home"></i> Contact Information</h4>
+                </div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <span class="label">Email:</span>
+                        <span class="value">demo.student@email.com</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Phone:</span>
+                        <span class="value">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Address:</span>
+                        <span class="value">123 Main Street, City, State 12345</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Emergency Contact:</span>
+                        <span class="value">+1 (555) 987-6543</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-header">
+                    <h4><i class="fas fa-users"></i> Parent/Guardian Information</h4>
+                </div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <span class="label">Father's Name:</span>
+                        <span class="value">John Demo</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Mother's Name:</span>
+                        <span class="value">Jane Demo</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Guardian Phone:</span>
+                        <span class="value">+1 (555) 987-6543</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Guardian Email:</span>
+                        <span class="value">parent@email.com</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Occupation:</span>
+                        <span class="value">Engineer / Teacher</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Documents -->
+    <div class="admission-documents">
+        <div class="section-title">
+            <h3><i class="fas fa-folder"></i> Admission Documents</h3>
+        </div>
+
+        <div class="documents-grid">
+            <div class="document-item verified">
+                <div class="doc-icon">
+                    <i class="fas fa-file-image"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Student Photograph</h4>
+                    <p>Passport size photo</p>
+                    <span class="status verified"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="view-btn" onclick="viewDocument('photo')">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-item verified">
+                <div class="doc-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Birth Certificate</h4>
+                    <p>Official birth certificate</p>
+                    <span class="status verified"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="view-btn" onclick="viewDocument('birth')">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-item verified">
+                <div class="doc-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Previous School Certificate</h4>
+                    <p>Transfer certificate from previous school</p>
+                    <span class="status verified"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="view-btn" onclick="viewDocument('transfer')">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-item verified">
+                <div class="doc-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Previous Academic Records</h4>
+                    <p>Grade 9 marksheet and report card</p>
+                    <span class="status verified"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="view-btn" onclick="viewDocument('academic')">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-item verified">
+                <div class="doc-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Address Proof</h4>
+                    <p>Residential address verification</p>
+                    <span class="status verified"><i class="fas fa-check-circle"></i> Verified</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="view-btn" onclick="viewDocument('address')">
+                        <i class="fas fa-eye"></i> View
+                    </button>
+                </div>
+            </div>
+
+            <div class="document-item pending">
+                <div class="doc-icon">
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <div class="doc-info">
+                    <h4>Medical Certificate</h4>
+                    <p>Health checkup report</p>
+                    <span class="status pending"><i class="fas fa-clock"></i> Pending</span>
+                </div>
+                <div class="doc-actions">
+                    <button class="upload-btn" onclick="uploadDocument('medical')">
+                        <i class="fas fa-upload"></i> Upload
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission Timeline -->
+    <div class="admission-timeline">
+        <div class="section-title">
+            <h3><i class="fas fa-timeline"></i> Admission Process Timeline</h3>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item completed">
+                <div class="timeline-marker">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Application Submitted</h4>
+                    <p>Online application form completed and submitted</p>
+                    <span class="timeline-date">June 1, 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-marker">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Documents Verification</h4>
+                    <p>All required documents verified by admission office</p>
+                    <span class="timeline-date">June 15, 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-marker">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Entrance Test</h4>
+                    <p>Successfully passed the admission entrance test</p>
+                    <span class="timeline-date">June 25, 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-marker">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Interview Completed</h4>
+                    <p>Student and parent interview conducted</p>
+                    <span class="timeline-date">July 5, 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-item completed">
+                <div class="timeline-marker">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Admission Confirmed</h4>
+                    <p>Admission letter issued and fees payment completed</p>
+                    <span class="timeline-date">July 15, 2024</span>
+                </div>
+            </div>
+
+            <div class="timeline-item pending">
+                <div class="timeline-marker">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>Medical Certificate</h4>
+                    <p>Submit medical fitness certificate</p>
+                    <span class="timeline-date">Pending</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission Certificate -->
+    <div class="admission-certificate">
+        <div class="section-title">
+            <h3><i class="fas fa-certificate"></i> Admission Certificate</h3>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-header">
+                <div class="school-logo">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div class="school-info">
+                    <h2>GREENWOOD HIGH SCHOOL</h2>
+                    <p>Affiliated to State Education Board</p>
+                </div>
+            </div>
+
+            <div class="certificate-content">
+                <h3>ADMISSION CERTIFICATE</h3>
+                <div class="certificate-details">
+                    <p>This is to certify that <strong>Demo Student</strong> has been granted admission to</p>
+                    <p><strong>Class 10th Grade - Section A</strong></p>
+                    <p>for the Academic Year <strong>2024-2025</strong></p>
+                    <p>Student ID: <strong>STU001</strong></p>
+                    <p>Date of Admission: <strong>July 15, 2024</strong></p>
+                </div>
+            </div>
+
+            <div class="certificate-footer">
+                <div class="signature">
+                    <p>Principal's Signature</p>
+                    <div class="signature-line"></div>
+                </div>
+                <div class="school-seal">
+                    <div class="seal">
+                        <i class="fas fa-stamp"></i>
+                        <p>School Seal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificate-actions">
+                <button class="download-btn" onclick="downloadCertificate()">
+                    <i class="fas fa-download"></i> Download Certificate
+                </button>
+                <button class="print-btn" onclick="printCertificate()">
+                    <i class="fas fa-print"></i> Print Certificate
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Important Notes -->
+    <div class="admission-notes">
+        <div class="section-title">
+            <h3><i class="fas fa-exclamation-triangle"></i> Important Information</h3>
+        </div>
+
+        <div class="notes-content">
+            <div class="note-item">
+                <i class="fas fa-info-circle"></i>
+                <p>Please submit the pending medical certificate within 30 days of admission.</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-calendar-alt"></i>
+                <p>Classes will commence from August 1st, 2024. Orientation program on July 30th, 2024.</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-uniform"></i>
+                <p>School uniform must be purchased from the authorized vendor. Details available in the student handbook.</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-book"></i>
+                <p>Textbooks and stationery list is available for download from the student portal.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function viewDocument(docType) {
+    alert(`Viewing ${docType} document...`);
+    // Add document viewing logic here
+}
+
+function uploadDocument(docType) {
+    alert(`Opening upload dialog for ${docType} document...`);
+    // Add document upload logic here
+}
+
+function downloadCertificate() {
+    alert('Downloading admission certificate...');
+    // Add certificate download logic here
+}
+
+function printCertificate() {
+    window.print();
+}
+</script>

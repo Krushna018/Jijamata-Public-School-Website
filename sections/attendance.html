@@ -1,0 +1,287 @@
+<div class="section-header">
+    <h2><i class="fas fa-calendar-check"></i> Attendance Record</h2>
+    <p>Track your daily attendance and view detailed reports</p>
+</div>
+
+<div class="attendance-container">
+    <!-- Attendance Summary Cards -->
+    <div class="attendance-summary">
+        <div class="summary-card present">
+            <div class="card-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3>148 Days</h3>
+                <p>Present</p>
+            </div>
+        </div>
+
+        <div class="summary-card absent">
+            <div class="card-icon">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3>12 Days</h3>
+                <p>Absent</p>
+            </div>
+        </div>
+
+        <div class="summary-card late">
+            <div class="card-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-content">
+                <h3>5 Days</h3>
+                <p>Late</p>
+            </div>
+        </div>
+
+        <div class="summary-card percentage">
+            <div class="card-icon">
+                <i class="fas fa-percentage"></i>
+            </div>
+            <div class="card-content">
+                <h3>92.5%</h3>
+                <p>Attendance Rate</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monthly Calendar View -->
+    <div class="attendance-calendar">
+        <div class="calendar-header">
+            <h3><i class="fas fa-calendar-alt"></i> December 2024</h3>
+            <div class="calendar-nav">
+                <button class="nav-btn" onclick="previousMonth()"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn" onclick="nextMonth()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <div class="calendar-grid">
+            <div class="calendar-weekdays">
+                <div class="weekday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+            </div>
+
+            <div class="calendar-days">
+                <!-- Previous month days -->
+                <div class="day other-month">26</div>
+                <div class="day other-month">27</div>
+                <div class="day other-month">28</div>
+                <div class="day other-month">29</div>
+                <div class="day other-month">30</div>
+                
+                <!-- Current month days -->
+                <div class="day present" data-status="present" title="Present">1</div>
+                <div class="day weekend">2</div>
+                <div class="day present" data-status="present" title="Present">3</div>
+                <div class="day present" data-status="present" title="Present">4</div>
+                <div class="day absent" data-status="absent" title="Absent">5</div>
+                <div class="day present" data-status="present" title="Present">6</div>
+                <div class="day present" data-status="present" title="Present">7</div>
+                <div class="day weekend">9</div>
+                <div class="day weekend">10</div>
+                <div class="day present" data-status="present" title="Present">11</div>
+                <div class="day late" data-status="late" title="Late">12</div>
+                <div class="day present" data-status="present" title="Present">13</div>
+                <div class="day present" data-status="present" title="Present">14</div>
+                <div class="day present" data-status="present" title="Present">15</div>
+                <div class="day weekend">16</div>
+                <div class="day weekend">17</div>
+                <div class="day present" data-status="present" title="Present">18</div>
+                <div class="day present" data-status="present" title="Present">19</div>
+                <div class="day present" data-status="present" title="Present">20</div>
+                <div class="day present" data-status="present" title="Present">21</div>
+                <div class="day present" data-status="present" title="Present">22</div>
+                <div class="day weekend">23</div>
+                <div class="day weekend">24</div>
+                <div class="day holiday" data-status="holiday" title="Winter Holiday">25</div>
+                <div class="day holiday" data-status="holiday" title="Winter Holiday">26</div>
+                <div class="day holiday" data-status="holiday" title="Winter Holiday">27</div>
+                <div class="day holiday" data-status="holiday" title="Winter Holiday">28</div>
+                <div class="day holiday" data-status="holiday" title="Winter Holiday">29</div>
+                <div class="day weekend">30</div>
+                <div class="day weekend">31</div>
+            </div>
+        </div>
+
+        <div class="calendar-legend">
+            <div class="legend-item">
+                <div class="legend-color present"></div>
+                <span>Present</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color absent"></div>
+                <span>Absent</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color late"></div>
+                <span>Late</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color holiday"></div>
+                <span>Holiday</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color weekend"></div>
+                <span>Weekend</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Attendance Record -->
+    <div class="attendance-details">
+        <div class="details-header">
+            <h3><i class="fas fa-list"></i> Recent Attendance Records</h3>
+            <div class="filter-options">
+                <select class="filter-select">
+                    <option value="all">All Records</option>
+                    <option value="present">Present Only</option>
+                    <option value="absent">Absent Only</option>
+                    <option value="late">Late Only</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="attendance-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Status</th>
+                        <th>Check-in Time</th>
+                        <th>Check-out Time</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="present-row">
+                        <td>Dec 20, 2024</td>
+                        <td>Friday</td>
+                        <td><span class="status-badge present"><i class="fas fa-check"></i> Present</span></td>
+                        <td>08:15 AM</td>
+                        <td>03:30 PM</td>
+                        <td>-</td>
+                    </tr>
+                    <tr class="present-row">
+                        <td>Dec 19, 2024</td>
+                        <td>Thursday</td>
+                        <td><span class="status-badge present"><i class="fas fa-check"></i> Present</span></td>
+                        <td>08:10 AM</td>
+                        <td>03:30 PM</td>
+                        <td>-</td>
+                    </tr>
+                    <tr class="present-row">
+                        <td>Dec 18, 2024</td>
+                        <td>Wednesday</td>
+                        <td><span class="status-badge present"><i class="fas fa-check"></i> Present</span></td>
+                        <td>08:05 AM</td>
+                        <td>03:30 PM</td>
+                        <td>-</td>
+                    </tr>
+                    <tr class="late-row">
+                        <td>Dec 17, 2024</td>
+                        <td>Tuesday</td>
+                        <td><span class="status-badge late"><i class="fas fa-clock"></i> Late</span></td>
+                        <td>08:45 AM</td>
+                        <td>03:30 PM</td>
+                        <td>Traffic delay</td>
+                    </tr>
+                    <tr class="present-row">
+                        <td>Dec 16, 2024</td>
+                        <td>Monday</td>
+                        <td><span class="status-badge present"><i class="fas fa-check"></i> Present</span></td>
+                        <td>08:00 AM</td>
+                        <td>03:30 PM</td>
+                        <td>-</td>
+                    </tr>
+                    <tr class="absent-row">
+                        <td>Dec 13, 2024</td>
+                        <td>Friday</td>
+                        <td><span class="status-badge absent"><i class="fas fa-times"></i> Absent</span></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>Medical leave</td>
+                    </tr>
+                    <tr class="present-row">
+                        <td>Dec 12, 2024</td>
+                        <td>Thursday</td>
+                        <td><span class="status-badge present"><i class="fas fa-check"></i> Present</span></td>
+                        <td>08:20 AM</td>
+                        <td>03:30 PM</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Monthly Reports -->
+    <div class="attendance-reports">
+        <h3><i class="fas fa-chart-bar"></i> Monthly Attendance Report</h3>
+        <div class="reports-grid">
+            <div class="report-card">
+                <h4>September 2024</h4>
+                <div class="report-stats">
+                    <p><strong>Present:</strong> 20 days</p>
+                    <p><strong>Absent:</strong> 2 days</p>
+                    <p><strong>Percentage:</strong> 90.9%</p>
+                </div>
+            </div>
+            <div class="report-card">
+                <h4>October 2024</h4>
+                <div class="report-stats">
+                    <p><strong>Present:</strong> 22 days</p>
+                    <p><strong>Absent:</strong> 1 day</p>
+                    <p><strong>Percentage:</strong> 95.7%</p>
+                </div>
+            </div>
+            <div class="report-card">
+                <h4>November 2024</h4>
+                <div class="report-stats">
+                    <p><strong>Present:</strong> 19 days</p>
+                    <p><strong>Absent:</strong> 3 days</p>
+                    <p><strong>Percentage:</strong> 86.4%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function previousMonth() {
+    // Add logic to navigate to previous month
+    console.log('Navigate to previous month');
+}
+
+function nextMonth() {
+    // Add logic to navigate to next month  
+    console.log('Navigate to next month');
+}
+
+// Filter attendance records
+document.addEventListener('DOMContentLoaded', function() {
+    const filterSelect = document.querySelector('.filter-select');
+    if (filterSelect) {
+        filterSelect.addEventListener('change', function() {
+            const filterValue = this.value;
+            const rows = document.querySelectorAll('.attendance-table tbody tr');
+            
+            rows.forEach(row => {
+                if (filterValue === 'all') {
+                    row.style.display = '';
+                } else {
+                    const hasClass = row.classList.contains(filterValue + '-row');
+                    row.style.display = hasClass ? '' : 'none';
+                }
+            });
+        });
+    }
+});
+</script>

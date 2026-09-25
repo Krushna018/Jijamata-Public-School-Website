@@ -1,0 +1,307 @@
+<div class="section-header">
+    <h2><i class="fas fa-clipboard-list"></i> Examinations</h2>
+    <p>View upcoming exams, schedules, and examination history</p>
+</div>
+
+<div class="examination-container">
+    <!-- Exam Status Overview -->
+    <div class="exam-overview">
+        <div class="overview-card upcoming">
+            <div class="card-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="card-content">
+                <h3>3</h3>
+                <p>Upcoming Exams</p>
+            </div>
+        </div>
+
+        <div class="overview-card completed">
+            <div class="card-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3>8</h3>
+                <p>Completed Exams</p>
+            </div>
+        </div>
+
+        <div class="overview-card average">
+            <div class="card-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="card-content">
+                <h3>85%</h3>
+                <p>Average Score</p>
+            </div>
+        </div>
+
+        <div class="overview-card rank">
+            <div class="card-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card-content">
+                <h3>5th</h3>
+                <p>Class Rank</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Exams -->
+    <div class="upcoming-exams">
+        <div class="section-title">
+            <h3><i class="fas fa-calendar-plus"></i> Upcoming Examinations</h3>
+        </div>
+
+        <div class="exam-cards">
+            <div class="exam-card urgent">
+                <div class="exam-header">
+                    <h4>Mathematics - Final Exam</h4>
+                    <span class="exam-type">Written</span>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-info">
+                        <p><i class="fas fa-calendar"></i> <strong>Date:</strong> December 22, 2024</p>
+                        <p><i class="fas fa-clock"></i> <strong>Time:</strong> 10:00 AM - 1:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Room:</strong> Hall A-101</p>
+                        <p><i class="fas fa-user"></i> <strong>Invigilator:</strong> Prof. Johnson</p>
+                    </div>
+                    <div class="exam-syllabus">
+                        <p><strong>Topics:</strong> Algebra, Geometry, Calculus, Statistics</p>
+                        <p><strong>Duration:</strong> 3 hours</p>
+                        <p><strong>Total Marks:</strong> 100</p>
+                    </div>
+                </div>
+                <div class="countdown">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span>2 days remaining</span>
+                </div>
+            </div>
+
+            <div class="exam-card">
+                <div class="exam-header">
+                    <h4>Physics - Practical Exam</h4>
+                    <span class="exam-type">Practical</span>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-info">
+                        <p><i class="fas fa-calendar"></i> <strong>Date:</strong> December 24, 2024</p>
+                        <p><i class="fas fa-clock"></i> <strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Room:</strong> Physics Lab</p>
+                        <p><i class="fas fa-user"></i> <strong>Invigilator:</strong> Dr. Smith</p>
+                    </div>
+                    <div class="exam-syllabus">
+                        <p><strong>Experiments:</strong> Optics, Electricity, Magnetism</p>
+                        <p><strong>Duration:</strong> 3 hours</p>
+                        <p><strong>Total Marks:</strong> 50</p>
+                    </div>
+                </div>
+                <div class="countdown">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span>4 days remaining</span>
+                </div>
+            </div>
+
+            <div class="exam-card">
+                <div class="exam-header">
+                    <h4>English Literature</h4>
+                    <span class="exam-type">Written</span>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-info">
+                        <p><i class="fas fa-calendar"></i> <strong>Date:</strong> December 26, 2024</p>
+                        <p><i class="fas fa-clock"></i> <strong>Time:</strong> 9:00 AM - 12:00 PM</p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Room:</strong> Hall B-205</p>
+                        <p><i class="fas fa-user"></i> <strong>Invigilator:</strong> Ms. Davis</p>
+                    </div>
+                    <div class="exam-syllabus">
+                        <p><strong>Topics:</strong> Poetry, Drama, Prose, Grammar</p>
+                        <p><strong>Duration:</strong> 3 hours</p>
+                        <p><strong>Total Marks:</strong> 100</p>
+                    </div>
+                </div>
+                <div class="countdown">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span>6 days remaining</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Schedule -->
+    <div class="exam-schedule">
+        <div class="section-title">
+            <h3><i class="fas fa-calendar-alt"></i> Complete Examination Schedule</h3>
+            <div class="schedule-filters">
+                <select class="filter-select">
+                    <option value="all">All Subjects</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="english">English</option>
+                    <option value="history">History</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="schedule-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Room</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="upcoming-row">
+                        <td><strong>Mathematics</strong></td>
+                        <td>Dec 22, 2024</td>
+                        <td>10:00 AM</td>
+                        <td>3 hours</td>
+                        <td>Hall A-101</td>
+                        <td><span class="type-badge written">Written</span></td>
+                        <td><span class="status-badge upcoming">Upcoming</span></td>
+                        <td>
+                            <button class="action-btn" onclick="downloadAdmitCard('math')">
+                                <i class="fas fa-download"></i> Admit Card
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="upcoming-row">
+                        <td><strong>Physics</strong></td>
+                        <td>Dec 24, 2024</td>
+                        <td>2:00 PM</td>
+                        <td>3 hours</td>
+                        <td>Physics Lab</td>
+                        <td><span class="type-badge practical">Practical</span></td>
+                        <td><span class="status-badge upcoming">Upcoming</span></td>
+                        <td>
+                            <button class="action-btn" onclick="downloadAdmitCard('physics')">
+                                <i class="fas fa-download"></i> Admit Card
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="upcoming-row">
+                        <td><strong>English</strong></td>
+                        <td>Dec 26, 2024</td>
+                        <td>9:00 AM</td>
+                        <td>3 hours</td>
+                        <td>Hall B-205</td>
+                        <td><span class="type-badge written">Written</span></td>
+                        <td><span class="status-badge upcoming">Upcoming</span></td>
+                        <td>
+                            <button class="action-btn" onclick="downloadAdmitCard('english')">
+                                <i class="fas fa-download"></i> Admit Card
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="completed-row">
+                        <td><strong>Chemistry</strong></td>
+                        <td>Dec 15, 2024</td>
+                        <td>10:00 AM</td>
+                        <td>3 hours</td>
+                        <td>Hall A-102</td>
+                        <td><span class="type-badge written">Written</span></td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td>
+                            <button class="action-btn" onclick="viewResult('chemistry')">
+                                <i class="fas fa-eye"></i> View Result
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="completed-row">
+                        <td><strong>Biology</strong></td>
+                        <td>Dec 12, 2024</td>
+                        <td>2:00 PM</td>
+                        <td>3 hours</td>
+                        <td>Biology Lab</td>
+                        <td><span class="type-badge practical">Practical</span></td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td>
+                            <button class="action-btn" onclick="viewResult('biology')">
+                                <i class="fas fa-eye"></i> View Result
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Exam Instructions -->
+    <div class="exam-instructions">
+        <div class="section-title">
+            <h3><i class="fas fa-info-circle"></i> Important Examination Instructions</h3>
+        </div>
+
+        <div class="instructions-content">
+            <div class="instruction-category">
+                <h4><i class="fas fa-clock"></i> Before the Exam</h4>
+                <ul>
+                    <li>Arrive at least 30 minutes before the exam time</li>
+                    <li>Bring your student ID card and admit card</li>
+                    <li>Carry only permitted items (pens, pencils, calculator if allowed)</li>
+                    <li>Mobile phones and electronic devices are strictly prohibited</li>
+                </ul>
+            </div>
+
+            <div class="instruction-category">
+                <h4><i class="fas fa-edit"></i> During the Exam</h4>
+                <ul>
+                    <li>Read all instructions carefully before starting</li>
+                    <li>Manage your time effectively across all questions</li>
+                    <li>Write clearly and legibly</li>
+                    <li>Raise your hand if you need assistance</li>
+                </ul>
+            </div>
+
+            <div class="instruction-category">
+                <h4><i class="fas fa-check"></i> After the Exam</h4>
+                <ul>
+                    <li>Submit your answer sheet before leaving</li>
+                    <li>Do not discuss answers outside the exam hall</li>
+                    <li>Results will be announced within 15 days</li>
+                    <li>Check your result online using your student ID</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function downloadAdmitCard(subject) {
+    alert(`Downloading admit card for ${subject} exam...`);
+    // Add actual download logic here
+}
+
+function viewResult(subject) {
+    alert(`Viewing result for ${subject} exam...`);
+    // Add result viewing logic here
+}
+
+// Filter exam schedule
+document.addEventListener('DOMContentLoaded', function() {
+    const filterSelect = document.querySelector('.schedule-filters .filter-select');
+    if (filterSelect) {
+        filterSelect.addEventListener('change', function() {
+            const filterValue = this.value;
+            const rows = document.querySelectorAll('.schedule-table tbody tr');
+            
+            rows.forEach(row => {
+                const subject = row.querySelector('td:first-child').textContent.toLowerCase();
+                if (filterValue === 'all' || subject.includes(filterValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    }
+});
+</script>
